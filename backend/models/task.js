@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
 
 const taskSchema = new mongoose.Schema({
-  user: { typw: mongoose.Schema.ObjectId, ref: "users" },
+  user: { type: mongoose.Schema.ObjectId, ref: "users" },
   name: String,
   description: String,
-  taskStatus: String,
+  taskStatus: {type: String, default: "to-do"},
   imageUrl: String,
-  taskStatus: "to-do",
   registerDate: { type: Date, default: Date.now }
 });
 
