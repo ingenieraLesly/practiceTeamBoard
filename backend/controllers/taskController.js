@@ -1,4 +1,4 @@
-import task from "../models/task";
+import task from "../models/task.js";
 
 const createTask = async (req, res) => {
   if (!req.body.name || !req.body.description)
